@@ -1,6 +1,6 @@
 var mongoose=require('mongoose')
 var schema=mongoose.Schema
-var pokemon=new schema({
+var Pokemon=new schema({
     num:Number,
     name:String,
     img:String,
@@ -14,7 +14,7 @@ var pokemon=new schema({
     avg_spawns:Number,
     spawn_time:String,
     multipliers:[Number],
-    weakness:[String],
+    weaknesses:[String],
     prev_evolution:[{
         num:Number,
         name:String
@@ -25,5 +25,5 @@ var pokemon=new schema({
     }]
 
 })
-var pokemon=mongoose.model('pokemon',pokemon)
-module.exports=pokemon
+var Pokemon=mongoose.model('pokemon',Pokemon)
+module.exports=Pokemon
